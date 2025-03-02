@@ -1,0 +1,700 @@
+<body>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      :root {
+        --light-blue: #add8e6;
+        --dark-blue: #00008b;
+        --text-color-dark: #ffffff;
+        --text-color-light: #000000;
+        --background-light: #add8e6; 
+        --background-dark: #1a1a1a;
+      }
+  
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: var(--background-light);
+        color: var(--text-color-light);
+        transition: all 0.3s ease;
+      }
+  
+      .container {
+        padding: 20px;
+        text-align: center;
+      }
+  
+      .toggle-button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: var(--dark-blue);
+        color: var(--text-color-dark);
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+  
+      .toggle-button:hover {
+        background-color: var(--light-blue);
+        color: var(--text-color-light);
+      }
+  
+      .dark-mode .toggle-button {
+        background-color: var(--light-blue);
+        color: var(--text-color-light);
+      }
+  
+      .dark-mode .toggle-button:hover {
+        background-color: var(--dark-blue);
+        color: var(--text-color-dark);
+      }
+  
+      .dark-mode {
+        background-color: var(--dark-blue);
+        color: var(--text-color-dark);
+      }
+  
+      .note {
+        background: var(--background-light);
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+  
+      .dark-mode .note {
+        background: var(--background-light); 
+      }
+  
+      #noteInput {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+  
+      #addNoteBtn {
+        padding: 10px 20px;
+        border: none;
+        background-color: var(--dark-blue);
+        color: var(--text-color-dark);
+        border-radius: 5px;
+        cursor: pointer;
+      }
+  
+      .dark-mode #addNoteBtn {
+        background-color: var(--light-blue);
+        color: var(--text-color-light);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Theme Switcher</h1>
+      <button class="toggle-button" onclick="toggleTheme()">Toggle Theme</button>
+      <textarea id="noteInput" placeholder="Write a note..."></textarea>
+      <button id="addNoteBtn">Add Note</button>
+      <div id="notes"></div>
+    </div>
+  
+    <script>
+      function toggleTheme() {
+        document.body.classList.toggle('dark-mode');
+        // Update notes when toggling theme
+        const notes = document.querySelectorAll('.note');
+        notes.forEach(note => note.classList.toggle('dark-mode', document.body.classList.contains('dark-mode')));
+      }
+  
+      document.getElementById('addNoteBtn').addEventListener('click', function() {
+        const noteInput = document.getElementById('noteInput');
+        const noteText = noteInput.value.trim();
+        if (noteText !== '') {
+          const note = document.createElement('div');
+          note.className = 'note';
+          note.textContent = noteText;
+          // Ensure the new note follows the current theme
+          if (document.body.classList.contains('dark-mode')) {
+            note.classList.add('dark-mode');
+          } else {
+            note.classList.remove('dark-mode');
+          }
+          document.getElementById('notes').appendChild(note);
+          noteInput.value = '';
+        }
+      });
+    </script>
+  </body>
+  </html>
+  
+  
+    <body>
+    <bgcolour = "#063FFA" ></bgcolour>
+    <body>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           
+             <style>
+                input[type="search"] {
+                    width: 638px;
+                    height: 44px;
+                    border-radius: 24px;
+                    border: 1px solid #dfe1e5;
+                    background: #fff;
+                    padding: 20px;
+                    box-shadow: 0 0 8px 1px #aaa;
+                }
+                input[type="search"]:hover {
+                    box-shadow: 0 0 10px 2px #aaa;
+                }
+                input[type="submit"] {
+                    border-radius: 2px;
+                    background: #f2f2f2;
+                    border: 1px solid #f2f2f2;
+                    color: #757575;
+                    cursor: pointer;
+                    font-size: 14px;
+                    font-weight: bold;
+                    width: 100px;
+                    padding: 0 16px;
+                    height: 36px;
+                    margin-left: 10px;
+                }
+                input[type="submit"]:hover {
+                    background: #f8f8f8;
+                    border: 1px solid #c6c6c6;
+                    color: #aaa;
+                }
+            </style>
+        </head>
+        <body>
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+                            <link rel="stylesheet" href="styles.css">
+          </head>
+          <body>
+              <div class="container">
+                  <form action="https://www.google.com/search" method="get" target="_blank">
+                      <input type="search" name="q" placeholder="Google Search" autocomplete="off" autofocus>
+                  </form>
+              </div>
+          </body>
+          </html>
+          
+            </div>
+        </body>          
+        
+      
+    </body>
+    </html>
+
+
+
+</html>
+  
+</body>
+</html>
+
+<title>Aquarium</title>    
+
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <style>
+                .ebay button {
+                    display: inline-block;
+                    padding: 10px 20px;
+                    font-size: 16px;
+                    color: #cc7a00b7;
+                    background-color: #cc7a00b7;
+                    text-decoration: none;
+                    border-radius: 5px;
+                }
+                .amazon button:hover {
+                    background-color: #cc7a00b7;
+                }
+            </style>
+        </head>
+        <body>
+            <a href="https://www.ebay.co.uk/?msockid=3a409825f7286fbf24418d79f6b76e0a" target="_blank" class="youtube-button">ebay</a>
+        </body>
+        </html> 
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .amazon button {
+                display: inline-block;
+                padding: 10px 20px;
+                font-size: 16px;
+                color: #cc7a00b7;
+                background-color: #cc7a00b7;
+                text-decoration: none;
+                border-radius: 5px;
+            }
+            .amazon button:hover {
+                background-color: #cc7a00b7;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="https://www.amazon.co.uk/?tag=hydukabkm-21&ref=pd_sl_77c9n1dl2y_e&adgrpid=1174279317182338&hvadid=73392659552020&hvnetw=o&hvqmt=e&hvbmt=be&hvdev=c&hvlocint=&hvlocphy=132584&hvtargid=kwd-73392595301339:loc-188&hydadcr=13724_2242080&mcid=&msclkid=68e73d70daed147dcb935ac83cba0ca2" target="_blank" class="youtube-button">amazon</a>
+    </body>
+    </html>
+    
+ 
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+        <style>
+            .youtube-button {
+                display: inline-block;
+                padding: 10px 20px;
+                font-size: 16px;
+      
+                background-color: #f8f0f0;
+                text-decoration: none;
+                border-radius: 5px;
+            }
+          
+        </style>
+    </head>
+    <body>
+        <a href="https://www.youtube.com" target="_blank" class="youtube-button">youtube</a>
+    </body>
+    </html>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <style>
+        body {
+          background-color: #87CEEB;
+          overflow: hidden;
+        }
+        .fish {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 100px;
+          height: 50px;
+          background: orange;
+          border-radius: 50px 50px 40px 40px;
+          animation: swim 5s linear infinite;
+        }
+        .tail {
+          position: absolute;
+          top: 15px;
+          left: -20px;
+          width: 20px;
+          height: 20px;
+          background: orange;
+          border-radius: 50%;
+          transform: rotate(45deg);
+        }
+        .eye {
+          position: absolute;
+          top: 15px;
+          left: 70px;
+          width: 10px;
+          height: 10px;
+          background: orange;
+          border-radius: 50%;
+        }
+        .pupil {
+          position: absolute;
+          top: 2px;
+          left: 2px;
+          width: 6px;
+          height: 6px;
+          background: orange;
+          border-radius: 50%;
+        }
+        .fin {
+          position: absolute;
+          top: 10px;
+          left: 20px;
+          width: 20px;
+          height: 20px;
+          background: orange;
+          border-radius: 0 50% 50% 50%;
+          transform: rotate(-45deg);
+        }
+        @keyframes swim {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(100vw);
+          }
+        }
+      </style>
+    </head>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+        body {
+          background-color: #87CEEB;
+          overflow: hidden;
+        }
+        .slow-fish {
+          position: absolute;
+          top: 70%; 
+          left: 0;
+          width: 100px;
+          height: 50px;
+          background: orange;
+          border-radius: 50px 50px 40px 40px;
+          animation: swim 10s linear infinite; 
+        }
+        .slow-tail {
+          position: absolute;
+          top: 15px;
+          left: -20px;
+          width: 20px;
+          height: 20px;
+          background: orange;
+          border-radius: 50%;
+          transform: rotate(45deg);
+        }
+        .slow-eye {
+          position: absolute;
+          top: 15px;
+          left: 70px;
+          width: 10px;
+          height: 10px;
+          background: white;
+          border-radius: 50%;
+        }
+        .slow-pupil {
+          position: absolute;
+          top: 2px;
+          left: 2px;
+          width: 6px;
+          height: 6px;
+          background: black;
+          border-radius: 50%;
+        }
+        .slow-fin {
+          position: absolute;
+          top: 10px;
+          left: 20px;
+          width: 20px;
+          height: 20px;
+          background: orange;
+          border-radius: 0 50% 50% 50%;
+          transform: rotate(-45deg);
+        }
+        @keyframes swim {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(100vw);
+          }    
+        }
+      </style>
+    </head>
+    <body>
+      <div class="slow-fish">
+        <div class="slow-tail"></div>
+        <div class="slow-eye">
+          <div class="slow-pupil"></div>
+        </div>
+        <div class="slow-fin"></div>
+      </div>
+    </body>
+    </html>
+    
+    
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquarium</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: #87CEEB; /* Light sky blue */
+            overflow: hidden;
+        }
+
+        .fish, .slow-fish, .shark {
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            animation: swim 5s linear infinite;
+        }
+
+        .fish {
+            top: 50%;
+            background: linear-gradient(to bottom, #ffa500, #ff4500);
+            border-radius: 50px 50px 40px 40px;
+        }
+
+        .slow-fish {
+            top: 70%;
+            background: linear-gradient(to bottom, #ffa500, #ff4500);
+            border-radius: 50px 50px 40px 40px;
+            animation-duration: 15s;
+        }
+
+        .shark {
+            bottom: 20px;
+            left: -150px;
+            width: 150px;
+            height: 80px;
+            background: linear-gradient(to bottom, #666, #333);
+            border-radius: 40px 40px 20px 20px;
+            animation-duration: 5s;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .tail, .slow-tail {
+            position: absolute;
+            top: 15px;
+            left: -20px;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(to bottom, #ffa500, #ff4500);
+            border-radius: 50%;
+            transform: rotate(45deg);
+        }
+
+        .tail-shark {
+            position: absolute;
+            bottom: 10px;
+            left: -30px;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(to bottom, #666, #333);
+            border-radius: 50%;
+            transform: rotate(45deg);
+        }
+
+        .eye, .slow-eye {
+            position: absolute;
+            top: 15px;
+            left: 70px;
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+        }
+
+        .pupil, .slow-pupil {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 6px;
+            height: 6px;
+            background: black;
+            border-radius: 50%;
+        }
+
+        .fin, .slow-fin {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(to bottom, #ffa500, #ff4500);
+            border-radius: 0 50% 50% 50%;
+            transform: rotate(-45deg);
+        }
+
+        .shark::before, .shark::after {
+            content: '';
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+        }
+
+        .shark::before {
+            width: 20px;
+            height: 20px;
+            top: 10px;
+            left: 110px;
+        }
+
+        .shark::after {
+            width: 10px;
+            height: 10px;
+            top: 15px;
+            left: 115px;
+            background: black;
+        }
+
+        @keyframes swim {
+            0% {
+                transform: translateX(-100px);
+            }
+            100% {
+                transform: translateX(100vw);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="fish">
+        <div class="tail"></div>
+        <div class="eye">
+            <div class="pupil"></div>
+        </div>
+        <div class="fin"></div>
+    </div>
+    <div class="slow-fish">
+        <div class="slow-tail"></div>
+        <div class="slow-eye">
+            <div class="slow-pupil"></div>
+        </div>
+        <div class="slow-fin"></div>
+    </div>
+    <div class="shark">
+        <div class="tail-shark"></div>
+    </div>
+</body>
+</html>
+<body>
+ <script src="main.js"></script>
+<body> 
+<link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        .joke { font-size: 24px; margin-top: 20px; }
+        button { padding: 10px 20px; font-size: 16px; }
+    </style>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1> Dad Joke Generator</h1>
+    <p id="joke"></p>
+    <button onclick="generateJoke()">Get a Joke</button>
+    <script>
+        const jokes = [
+         "Why don't scientists trust atoms? Because they make up everything.",
+           "Why did the scarecrow win an award? Because he was outstanding in his field.",
+            "Why don't skeletons fight each other? They don't have the guts.",
+            "What do you call fake spaghetti? An impasta.",
+            "Why was the math book sad? Because it had too many problems.",
+            "What did the ocean say to the beach? Nothing, it just waved.",
+            "Why can't you give Elsa a balloon? Because she will let it go.",
+            "What did one plate say to the other plate? Lunch is on me.",
+            "How do you make a tissue dance? You put a little boogie in it.",
+            "Why did the bicycle fall over? Because it was two-tired.",
+            "What do you call cheese that isn't yours? Nacho cheese.",
+            "What time is it when the clock strikes 13? Time to get a new clock.",
+            "How does a penguin build its house? Igloos it together.",
+            "Why don't eggs tell jokes? They'd crack each other up.",
+            "What do you call a bear with no teeth? A gummy bear.",
+            "How do you catch a squirrel? Climb a tree and act like a nut.",
+            "Why don't scientists trust stairs? Because they're always up to something.",
+            "Why did the golfer bring extra pants? In case he got a hole in one.",
+            "What kind of tree fits in your hand? A palm tree.",
+            "Why did the tomato turn red? Because it saw the salad dressing.",
+            "How do you organize a space party? You planet.",
+            "Why did the picture go to jail? Because it was framed.",
+            "Why don't some couples go to the gym? Because some relationships don't work out.",
+            "How does a vampire start a letter? Tomb it may concern.",
+            "Why did the student eat his homework? Because his teacher told him it was a piece of cake.",
+            "What do you call an alligator in a vest? An investigator.",
+            "Why don't seagulls fly over the bay? Because then they'd be bagels.",
+            "How does a cucumber become a pickle? It goes through a jarring experience.",
+            "Why did the scarecrow become a successful neurosurgeon? He was outstanding in his field.",
+            "How does a scientist freshen her breath? With experi-mints.",
+            "Why don't koalas count as bears? They don't have the right koalafications.",
+            "What do you call a pig that knows karate? A pork chop.",
+            "Why was the belt arrested? It held up a pair of pants.",
+            "What kind of shoes do ninjas wear? Sneakers.",
+            "How does the moon cut his hair? Eclipse it.",
+            "What's brown and sticky? A stick.",
+            "Why can't your nose be 12 inches long? Because then it would be a foot.",
+            "What do you call a droid that takes the long way around? R2 detour.",
+            "How does a train eat? It goes chew chew.",
+            "What do you call a magic dog? A labracadabrador.",
+            "Why was the math book sad? It had too many problems.",
+            "Why did the chicken join a band? Because it had the drumsticks.",
+            "What's orange and sounds like a parrot? A carrot.",
+            "How does a mathematician plow fields? With a pro-tractor.",
+            "How do you stop an astronaut's baby from crying? You rocket.",
+            "Why did the girl smear peanut butter on the road? To go with the traffic jam.",
+            "How do you fix a cracked pumpkin? With a pumpkin patch.",
+            "Why did the scarecrow become a neurosurgeon? He was outstanding in his field.",
+            "How do you catch a unique rabbit? Unique up on it.",
+            "How do you catch a tame rabbit? Tame way.",
+            "Why did the banana go to the doctor? Because it wasn't peeling well.",
+            "Why did the computer go to the doctor? It had a virus.",
+            "Why did the skeleton go to the party alone? He had no body to go with him.",
+            "Why do cows have hooves instead of feet? Because they lactose.",
+            "Why did the cookie go to the hospital? Because it felt crummy.",
+            "Why did the man put his money in the blender? He wanted to make liquid assets.",
+            "What kind of key opens a banana? A monkey.",
+            "Why did the physics professor break up with the biology professor? There was no chemistry.",
+            "What do you get if you cross a snowman and a vampire? Frostbite.",
+            "What do you get if you cross an elephant and a fish? Swimming trunks.",
+            "Why was the broom late? It swept in.",
+            "How do you fix a broken tomato? With tomato paste.",
+            "What's a scarecrow's favorite fruit? Strawberries.",
+            "What do you get when you cross a snowman and a vampire? Frostbite.",
+            "What kind of shoes do ninjas wear? Sneakers."
+
+        ];
+
+        function generateJoke() {
+            const randomIndex = Math.floor(Math.random() * jokes.length);
+            document.getElementById("joke").textContent = jokes[randomIndex];
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
